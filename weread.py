@@ -427,7 +427,7 @@ if __name__ == "__main__":
             if(categories!=None):
                 categories = [x["title"] for x in categories]
             print(f"正在同步 {title} ,一共{len(books)}本，当前是第{i}本。")
-            #check(bookId)
+            check(bookId)
             isbn,rating = get_bookinfo(bookId)
             id = insert_to_notion(title, bookId, cover, sort, author,isbn,rating,categories)
             chapter = get_chapter_info(bookId)
